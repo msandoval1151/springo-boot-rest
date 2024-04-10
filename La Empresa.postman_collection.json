@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "d3d9e9a0-d7e4-45bb-a2c2-fc60fc249a91",
+		"name": "La Empresa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9548059",
+		"_collection_link": "https://blue-space-246850.postman.co/workspace/QA-AnexoSBS~00e3869c-4ef7-4e61-a58d-b59af239303a/collection/9548059-d3d9e9a0-d7e4-45bb-a2c2-fc60fc249a91?action=share&source=collection_link&creator=9548059"
+	},
+	"item": [
+		{
+			"name": "Login-post",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProcesarCambio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMjc4MTQ3NiwiZXhwIjoxNzEyNzgyOTE2fQ.B0WUPcwJh_cknEoreVTzleD0TJJ_y8J-5_zVDUYo8I0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/divisas/procesarCambio?id=1&monto=200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"divisas",
+						"procesarCambio"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "monto",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarProcesos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMjc3NjgyNywiZXhwIjoxNzEyNzc4MjY3fQ.JDlaXQVO0brFdCPotrERxNe5fR0xpYQ4vblqDtcN3FE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/divisas/buscarProcesos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"divisas",
+						"buscarProcesos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Saludo bloqueado sin login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMjc4MTQ3NiwiZXhwIjoxNzEyNzgyOTE2fQ.B0WUPcwJh_cknEoreVTzleD0TJJ_y8J-5_zVDUYo8I0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/divisas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"divisas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Divisas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMjc4MTQ3NiwiZXhwIjoxNzEyNzgyOTE2fQ.B0WUPcwJh_cknEoreVTzleD0TJJ_y8J-5_zVDUYo8I0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/divisas/consultarCambio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"divisas",
+						"consultarCambio"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
